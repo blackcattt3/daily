@@ -5,13 +5,13 @@
 // 슬라이드바
 
 let itemList = [];
-let list = [];
 let saveBtn = document.querySelector(".save-btn");
 let input = document.querySelector(".input");
 let checkBtn = document.querySelector(".check-btn");
 let deleteBtn = document.querySelectorAll(".delete-btn");
 let showResult = document.querySelector(".show-result");
 let tabBtn = document.querySelectorAll(".tab-list div");
+let underLine = document.querySelector(".underline");
 let mode = "All"
 
 // 할일 추가 함수
@@ -102,9 +102,14 @@ const filterTab = (e) => {
     render();
 }
 
+const indicator = (e)=>{
+    underLine.style.left = e.currentTarget.offsetLeft + "px";
+    underLine.style.width = e.currentTarget.offsetWidth + "px";
+    underLine.style.top = e.currentTarget.offsetTop + e.currentTarget.offsetHeight + "px";
+}
 
 tabBtn.forEach((e)=>e.addEventListener("click", (e)=>filterTab(e.target.textContent)));
-
+tabBtn.forEach((menu)=>menu.addEventListener("click", (e)=>indicator(e)));
 showResult.addEventListener("click", (e)=>{if(e.target.classList.contains("delete-btn")){
         // console.log(e.target);
         // console.log(e.target.dataset);

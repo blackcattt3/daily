@@ -13,7 +13,7 @@ html, body{
     padding: 1em;
 }
 .tab-list div{
-    padding-right: 1em;
+    margin-right: 1em;
 }
 .tab-list div:hover{
     cursor: pointer;
@@ -27,11 +27,12 @@ html, body{
 }
 .underline{
     position: absolute;
-    width: 20px;
+    width: 0px;
     height: 4px;
     background-color: pink;
-    margin-top: 40px;
-    margin-left: 15px;
+    top:0;
+    left:0;
+    transition: 0.5s;
 }
 .task-done{
     text-decoration: line-through;
