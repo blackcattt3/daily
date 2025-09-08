@@ -1,0 +1,34 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding: 1em;
+}
+.tab{
+    position: relative;
+}
+.tab-list{
+    display: flex;
+    padding: 1em;
+}
+.tab-list div{
+    padding-right: 1em;
+}
+.tab-list div:hover{
+    cursor: pointer;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid #e2e2e2;
+    padding: 1em;
+}
+.underline{
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background-color: pink;
+    margin-top: 40px;
+    margin-left: 15px;
+}
