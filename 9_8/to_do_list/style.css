@@ -14,6 +14,7 @@ html, body{
 }
 .tab-list div{
     margin-right: 1em;
+    /* padding은 아예 이것까지 width로 침! margin은 텍스트 길이만큼만 currenttarget이라고 침 */
 }
 .tab-list div:hover{
     cursor: pointer;

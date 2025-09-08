@@ -110,7 +110,8 @@ const indicator = (e)=>{
 
 tabBtn.forEach((e)=>e.addEventListener("click", (e)=>filterTab(e.target.textContent)));
 tabBtn.forEach((menu)=>menu.addEventListener("click", (e)=>indicator(e)));
-showResult.addEventListener("click", (e)=>{if(e.target.classList.contains("delete-btn")){
+showResult.addEventListener("click", (e)=>
+    {if(e.target.classList.contains("delete-btn")){
         // console.log(e.target);
         // console.log(e.target.dataset);
         // console.log(e.target.dataset.id);
