@@ -1,7 +1,7 @@
 *{
     margin:0;
     padding:0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 body{
     margin:0;
@@ -65,6 +65,10 @@ body{
 }
 .search-toggle.active{
     display: flex;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 576px){

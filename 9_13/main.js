@@ -9,15 +9,65 @@ let xBtn = document.querySelector(".x-btn");
 let hamburger = document.querySelector(".hamburger");
 let goBtn = document.querySelector(".go-btn");
 
-// totalResult
+let totalResults = 0;
+const pageSize = 5;
+const groupSize = 5;
+let page = 1;
+// totalPage
+// pageGroup
+// lastPage
+// firstPage
 
 
 const paginationRender = ()=>{
     
+    // totalResults = data.totalResults;
+    const totalPage = Math.ceil(totalResults/pageSize)
+    let pageGroup = Math.ceil(page/groupSize);
+    let lastPage = pageGroup * groupSize;
+    if(lastPage<totalPage){
+        lastPage = totalPage;
+    }
+    let firstPage = lastPage - (groupSize-1);
+    if(firstPage<1){
+        firstPage = 1
+    }
+    // console.log(totalResult);
+
+    paginationHTML = '';
+    if(page>1){
+        paginationHTML += `<li class="page-item" onclick='moveToPage(${1})'><a class="page-link" href="#"><<</a></li>
+        <li class="page-item" onclick='moveToPage(${page-1})'><a class="page-link" href="#"><</a></li>`
+    }
+    for(let i=firstPage;i<=lastPage;i++){
+        paginationHTML += `<li class="page-item ${i===page?"active":""}" onclick='moveToPage(${i})'><a class="page-link" href="#">${i}</a></li>`
+    }
+    if(page<totalPage){
+        paginationHTML += `<li class="page-item" onclick='moveToPage(${page+1})'><a class="page-link" href="#">></a></li>
+        <li class="page-item" onclick='moveToPage(${totalPage})'><a class="page-link" href="#">>></a></li>`
+    }
+
+    document.querySelector(".pagination").innerHTML = paginationHTML;
 }
 
+const moveToPage = (clickedPage)=>{
+    page = clickedPage;
+    getNews();
+    // paginationRender();
+    // console.log(clickedPage);
+}
+
+// const pageRender = ()=>{
+//     const start = (page-1) * pageSize;      // 0,5,10...
+//     const end = start + pageSize;           // 5,10,15...
+
+// }
 
 const getNews = async()=>{
+
+    url.searchParams.set("page", page);
+    url.searchParams.set("pageSize", pageSize);
+
     try{
         const response = await fetch(url);
         const data = await response.json();
@@ -30,6 +80,7 @@ const getNews = async()=>{
             totalResults = data.totalResults;
             console.log(newsList);
             renderNews()
+            paginationRender();
         }else{
             throw new Error(data.message);
         }
