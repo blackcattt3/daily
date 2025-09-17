@@ -36,6 +36,7 @@ const calculate = ()=>{
     }
     console.log(resultNum);
     numList = [];
+    number = ''
     numList.push(resultNum);
 }
 
