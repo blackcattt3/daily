@@ -25,10 +25,19 @@ html, body, #root{
 }
 .box{
   width: 300px;
-  border: 2px solid black;
+  border: 10px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.win{
+  border: 10px solid green;
+}
+.tie{
+  border: 10px solid black;
+}
+.lose{
+  border: 10px solid red;
 }
 .item-img{
   width: 200px;
