@@ -1,4 +1,9 @@
-html,body{
+/* *{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+} */
+html, body, #root{
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -6,15 +11,16 @@ html,body{
 .wrapper{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 20px;
   height: 100vh;
-  gap:20px;
 }
 .main{
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
   gap:20px;
 }
 .box{
