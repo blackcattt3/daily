@@ -24,12 +24,33 @@ function App() {
   const [userSelect, setUserSelect] = useState(null);
   const [computerSelect, setComputerSelect] = useState(null);
   const [judge, setJudge] = useState("");
+  const [userScore, setUserScore] = useState(0);
+  const [computerScore, setComputerScore] = useState(0);
 
   const play = (userChoice)=>{
+
     setUserSelect(choice[userChoice]);
     const computerChoice = randomItem();
     setComputerSelect(computerChoice);
-    setJudge(judgement(choice[userChoice], computerChoice));
+
+    const result = judgement(choice[userChoice], computerChoice);
+    setJudge(result);
+
+    let newUserScore = userScore;
+    let newComputerScore = computerScore;
+
+    if(result === "win"){
+      newUserScore++;
+      setUserScore(newUserScore);
+    } else if(result === "lose"){
+      newComputerScore++;
+      setComputerScore(newComputerScore);
+    }
+    
+    if(newUserScore == 5 || newComputerScore == 5){
+      console.log("game Over")
+    }
+
   }
 
   const randomItem = ()=>{
@@ -47,9 +68,13 @@ function App() {
       else if(user.name === "rock") return computer.name === "scissors"?"win":"lose";
       else if(user.name === "paper") return computer.name === "rock"?"win":"lose";
   }
+  
 
   return (
     <div className='wrapper'>
+      <div className='main'>
+        {userScore}:{computerScore}
+      </div>
       <div className='main'>
         <Box title="You" item={userSelect} result={judge}/>
         <Box title="Computer" item={computerSelect} result={judge}/>
