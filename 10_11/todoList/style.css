@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.nav-bar{
+    display: flex;
+    gap: 10px;
+    
+}
+.task-show{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.task-layout{
+    display: flex;
+    justify-content: space-between;
+}
+.done-Task{
+    text-decoration: line-through;
+}
+.tab{
+    position: relative;
+}
+.underline{
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    background-color: pink;
+    top:0;
+    left:0;
+    transition: 0.5s;
+}
