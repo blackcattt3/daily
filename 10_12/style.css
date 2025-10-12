@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html.body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+.margin{
+    margin: 30px;
+    border: 1px solid black;
+
+}
+.padding{
+    padding: 30px;
+    border: 1px solid black;
+
+}
+div {
+  display: inline-block; /* 또는 inline */
+}
