@@ -22,17 +22,17 @@ src/<br>
    ⎿ LoginPage.jsx          → 로그인 페이지<br>
    ⎿ DetailPage.jsx         → 디테일 페이지<br>
 
-
-
+<br>
+<br>
 ✅ 기본화면은 홈페이지<br>
 ✅ 버튼을 눌러 디테일 페이지로 이동 가능<br>
 ✅ 위의 경우 로그인이 되어있을 경우만 디테일 페이지로 이동가능. <br>
 ✅ 로그인 탭 눌러서 로그인 페이지로 이동 가능<br>
 
-⭐️ PrivateRoute 활용을 위해 `<Navigate to=''>` 를 이용하여 authenticate의 true/false 유무를 판단하여 true 일 경우만 디테일 페이지로 이동이 가능하게 한다. 로그인 안되어있다면 바로 로그인 페이지로 이동.<br>
+⭐️ PrivateRoute 활용을 위해 `<Navigate to=''>` 를 이용하여 authenticate의 true/false 유무를 판단하여 true 일 경우만 디테일 페이지로 이동이 가능하게 한다. <br>로그인 안되어있다면 바로 로그인 페이지로 이동.<br>
 ⭐️ PrivateRoute는 일종의 문지기 역할.<br>
-`<Route path="/detail" element={<PrivateRoute authenticate={authenticate}/>}/>` 로 기본경로를 /detail로 잡아놓고 PrivateRoute를 거치게 해 여기서 조건부 렌더링을 활용하여 로그인이 안되어있을 경우 `<Navigate to='/login'>` 로 인해 경로를 아예 로그인 페이지로 돌려버린다. 조건이 맞다면 경로는 그대로 유지, 그제서야 DetailPage 컴포넌트 렌더.
-
+`<Route path="/detail" element={<PrivateRoute authenticate={authenticate}/>}/>` 로 기본경로를 /detail로 잡아놓고 PrivateRoute를 거치게 해 여기서 조건부 렌더링을 활용하여 로그인이 안되어있을 경우 `<Navigate to='/login'>` 로 인해 경로를 아예 로그인 페이지로 돌려버린다. <br>조건이 맞다면 경로는 그대로 유지, 그제서야 DetailPage 컴포넌트 렌더.<br>
+<br>
 
 | 개선 항목           | 제안                                                       |
 | --------------- | -------------------------------------------------------- |
