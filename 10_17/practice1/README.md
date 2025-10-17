@@ -48,7 +48,9 @@ localStorage.removeItem('auth');`
 }, 10);`  
 
 이렇게 했더니 된다!!  
+
 <br>
+
 🧠 원인 분석  
 리액트의 setState는 비동기적으로 동작하기 때문에 navigate()와 setAuthenticate()가 거의 동시에 실행되면 렌더링 사이클 중 PrivateRoute가 먼저 감지 → 로그인 페이지로 이동하는 현상이 발생함.  즉, 페이지이동 하기도 전에 navigate('/') 보다 PrivateRoute가 먼저 실행된다.  
 
