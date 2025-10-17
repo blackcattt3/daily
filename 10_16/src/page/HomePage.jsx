@@ -12,7 +12,7 @@ const HomePage = () => {
             <h1>HomePage</h1>
             <div onClick={goToLogin} className='login-btn'>로그인</div>
         </div>
-        <button onClick={()=>navigate('/detail')}>go to detail</button>
+        <button onClick={()=>navigate('/detail/')}>go to detail</button>
     </div>
   )
 }
