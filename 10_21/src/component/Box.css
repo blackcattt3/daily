@@ -1,0 +1,25 @@
+.box{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: beige;
+    transition: all 1s ease-out
+}
+.box.purple{
+    background-color: purple;
+}
+.button{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black
+}
+
+.small-box{
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    transition: all 1s ease-out
+}
+.small-box.smallColor{
+    background-color: lightpink;
+}
