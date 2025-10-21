@@ -12,8 +12,10 @@ const Box = () => {
             // e.current가 button 내에 있는지 없는지 판단할것.
             if(isClick && boxRef.current && boxRef.current.contains(e.target)){
                 setIsClick(false);
-                console.log(e.target)
+                console.log(boxRef.current) // 내가 ref로 연결해둔 특정 요소
+                console.log(e.target)       // 지금 실제로 클릭된 요소
         }}
+
         if(isClick){
             document.addEventListener('click', outSideClick)
             console.log("해제준비")
