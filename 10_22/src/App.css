@@ -1,0 +1,14 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,body,#root{
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+.app{
+  /* height: 100vh; */
+  transition: all 1s ease-in-out;
+}

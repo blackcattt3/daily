@@ -1,0 +1,28 @@
+.first{
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.first-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100vh;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: beige;
+    transition: background-color 0.5s ease-in-out;
+}
+.box.pink{
+    background-color: lightpink;
+}
+.swipe{
+    color: white
+}
