@@ -1,6 +1,7 @@
 import React from 'react'
 
 const PostItem = ({post, deletePost}) => {
+    // 게시글 보여주기! (하나의 컴포넌트)
   return (
     <div
         style={{
