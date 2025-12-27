@@ -1,0 +1,21 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,body,#root{
+  margin: 0px;
+  padding: 10px;
+  height: 100%;
+}
+.user-list{
+  width: 200px;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.user-list:hover{
+  transform: scale(1.1);
+}
